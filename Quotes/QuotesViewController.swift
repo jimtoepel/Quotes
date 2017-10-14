@@ -10,6 +10,8 @@ import Cocoa
 
 class QuotesViewController: NSViewController {
 
+    @IBOutlet var textLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -20,6 +22,7 @@ class QuotesViewController: NSViewController {
 
 extension QuotesViewController {
     // Storyboard instantiation
+    
     static func freshController() -> QuotesViewController {
         // 1
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
@@ -30,5 +33,20 @@ extension QuotesViewController {
             fatalError("Why cant I find QuotesViewContoller? - Check Main.storyboard")
         }
         return viewcontroller
+    }
+}
+
+
+extension QuotesViewController {
+    @IBAction func previous(_ sender: NSButton) {
+        
+    }
+    
+    @IBAction func next(_ sender: NSButton) {
+        
+    }
+    
+    @IBAction func quit(_sender: NSButton) {
+        
     }
 }
